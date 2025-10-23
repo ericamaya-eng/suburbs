@@ -1,28 +1,31 @@
 /* Basic reset */
-html,body{height:100%;margin:0;padding:0;font-family:Arial,Helvetica,sans-serif}
+html,body { height:100%; margin:0; padding:0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
 
-.page{min-height:100vh;background-size:cover;background-position:center;background-repeat:no-repeat;}
+/* Full-page background using your PNG */
+.hero {
+  min-height: 100vh;
+  background-image: url("assets/backgroundforfront.png"); /* replace path if needed */
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
 
-/* Intro page background */
-.intro{background-image:url('https://via.placeholder.com/1920x1080?text=Intro+Background');}
+/* Bottom-center clickable image styling (reduced by 50% from 320px to 160px) */
+.bottom-center-link {
+  position: fixed;
+  left: 50%;
+  bottom: 32px;
+  transform: translateX(-50%);
+  display: inline-block;
+  z-index: 10; /* keep above background */
+}
+.bottom-center-link img {
+  display: block;
+  width: 160px;    /* reduced by 50% */
+  max-width: 90vw;
+  height: auto;
+  border: 0;
+}
 
-/* Second page background and centering */
-.second{background-image:url('https://via.placeholder.com/1920x1080?text=Second+Page+Background');display:flex;align-items:center;justify-content:center}
-.second .center-link img{max-width:90vw;height:auto}
-
-/* Third page background */
-.third{background-image:url('https://via.placeholder.com/1920x1080?text=Third+Page+Background');position:relative}
-
-/* Bottom center link on intro */
-.bottom-center-link{position:fixed;left:50%;transform:translateX(-50%);bottom:40px;display:inline-block}
-.bottom-center-link img{max-width:90vw;height:auto}
-
-/* Corner images */
-.corner{position:absolute;width:150px;height:150px;object-fit:cover}
-.top-left{top:20px;left:20px}
-.top-right{top:20px;right:20px}
-.bottom-left{bottom:20px;left:20px}
-.bottom-right{bottom:20px;right:20px}
-
-/* Make images accessible with focus outlines */
-a:focus,img:focus{outline:3px solid rgba(0,123,255,0.6);outline-offset:3px}
+/* Accessibility focus outlines */
+a:focus, img:focus { outline: 3px solid rgba(0,123,255,0.6); outline-offset: 3px; }
