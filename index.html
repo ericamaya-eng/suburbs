@@ -3,15 +3,19 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Intro with Background</title>
+  <title>Intro with Image Background</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Inline style approach: change the path below to your PNG -->
-  <main class="hero" role="img" aria-label="Intro background image"
-        style="background-image: url('backgroundforfront.png');">
+  <!-- Actual <img> used as the page background for better control and <img> features -->
+  <img src="backgroundforfront.png" alt="" aria-hidden="true" class="bg-img">
+
+  <!-- Main content (keeps semantic structure if you want to add content later) -->
+  <main class="hero" role="main" aria-label="Intro content">
+    <!-- Add any foreground content here -->
   </main>
 
+  <!-- Bottom-center clickable image (keeps previous behavior) -->
   <a href="page2.html" class="bottom-center-link" aria-label="Go to next page">
     <img src="housesfar.png" alt="Houses (far)" />
   </a>
